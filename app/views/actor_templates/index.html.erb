@@ -5,16 +5,20 @@
   </ul>
 </nav>
 
-<h1>List of actors</h1>
+<article>
+  <header>
+    <h1>List of Actors</h1>
+  </header>
 
-<ul>
-  <% @list_of_actors.each do |actor| %>
-    <li>
-      <a href="/actors/<%= actor.id %>">
-        <img src="<%= actor.image %>" width="100">
+  <ul>
+    <% @list_of_actors.each do |actor| %>
+      <li>
+        <a href="/actors/<%= actor.id %>">
+          <img src="<%= actor.image %>" width="100">
 
-        <%= "#{actor.last_name}, #{actor.first_name}" %>
-      </a>
-    </li>
-  <% end %>
-</ul>
+          <%= "#{actor.last_name}, #{actor.first_name}" %>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</article>
